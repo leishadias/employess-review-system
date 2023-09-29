@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/signup.css">
+<div class="mainContainer ">
+    <div id="signup-container">
+        <div class="container-border" class="center-align">
+            <img src="/images/logo2.jpeg" alt="logo" class="logo-img">
+    
+            <!--create new employee form-->
+            <form method="POST" action="/users/addEmployee" class="center-align">
+                <div class="form-floating">
+                    <input type="text" name="name" required placeholder="Name" class="form-control my-2" id="nameInput">
+                    <label for="nameInput">Name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" name="email" required placeholder="Email" class="form-control my-2" id="emailInput" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                    <label for="emailInput">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password" required placeholder="Password" class="form-control my-2" id="passwordInput">
+                    <label for="passwordInput">Password</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="confirmPassword" required placeholder="Confirm password" class="form-control my-2" id="confirmPasswordInput">
+                    <label for="confirmPasswordInput">Confirm password</label>
+                </div>
+                <input type="submit" value="Create user" class="margin submit-btn">
+            </form>
+        </div>
+    </div>
+</div>

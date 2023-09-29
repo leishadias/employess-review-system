@@ -1,0 +1,40 @@
+<%if(locals.user){%>
+    <div class="outerDiv">    
+        <!-- App introduction -->
+        <div class="intro-box">
+            <p class="intro">Hello and welcome to <strong>Performix</strong>, the app that lets you track and improve 
+                your performance by getting feedback from your colleagues. With Performix, you can see how others rate 
+                your work, skills, and behaviors, as well as give your own ratings to others. Performix helps you identify 
+                your strengths and areas for development, and provides you with tips and resources to help you achieve your goals.</p>
+            <hr>
+        </div>
+        <div class="home-box">
+            <p class="employeereview">Kindly, review your co-employees</p>
+            <div class="reviewBox">
+                <% for(let i = 0 ;i<recipent.length ; i++ ) {%>
+                    <%if(recipent[i] != null) {%>
+                        <div class="review-form-conatiner">
+                            <h5>To : <%= recipent[i].name%></h5>
+                            <form action="/reviews/newReview/<%= recipent[i]._id %>" method="get">
+                                <textarea placeholder="Type your review here!" name="newReview" rows="5"></textarea>
+                                <br>
+                                <button type="submit" class="submit-btn"> Submit </button>
+                            </form>
+                        </div>
+                    <%}%>
+                <%}%>   
+            </div>
+        </div>
+        <div class="home-box">
+            <p class="myreview">My Reviews</p>
+            <div class="reviewBox">
+                <% for(let review of reviews ) {%>
+                    <div class="review-card">
+                        <h5><%= review.content %> </h5>
+                        <p>~ <i><%= review.name %></i></p>
+                    </div>
+                <%}%>    
+            </div>
+        </div>
+    </div>
+<%}%>

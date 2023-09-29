@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="/css/signin.css">
+
+<!--sign in page-->
+<div id="signin-container">
+    <div id="login-img-container">
+        <img src="/images/signin2.webp" alt="login-image" id="loginimg">
+    </div>
+    <div id="login-form-container">
+        <div class="container-border" class="center-align">
+            <img src="/images/logo2.jpeg" alt="logo" class="logo-img">
+            <!--sign in form-->
+            <form method="POST" action="/users/create-session" class="center-align">
+                <div class="form-floating my-2">
+                    <input type="email" name="email" required placeholder="Email" class="form-control" id="emailInput">
+                    <label for="emailInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password" required placeholder="Password" class="form-control" id="passwordInput">
+                    <label for="passwordInput">Password</label>
+                </div>
+                <input type="submit" value="Log in" class="margin submit-btn">
+            </form>
+        </div>
+        <div>
+            <a href="/users/sign-up">Don't have an account? Sign Up</a>
+        </div>
+        <p>
+            <a href="/users/forgotPassword">Forgot Password?</a>
+        </p>
+    </div>
+</div>

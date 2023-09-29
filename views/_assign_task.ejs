@@ -1,0 +1,35 @@
+<div class="modal fade" id="assignTaskModal" tabindex="-1" aria-labelledby="assigntask" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Assign review</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/admin/setReviews" method="POST" class="mt-1 card-body">
+          <div>
+            <p>Set Reviewer</p>
+            <select class="form-select" aria-label="Default select" name="sender">
+              <option selected>Sender</option>
+              <% for(let i = 0; i<employee.length ; i++){ %>
+                <option value= <%= employee[i].id %> > <%= employee[i].name %> </option>
+              <%}%>    
+            </select>
+          </div>
+          <div>
+            <br>
+            <p>Select the Recipient Employee</p>
+            <select class="form-select" aria-label="Default select" name="receiver">
+              <option selected>Receiver</option>
+              <% for(let i = 0; i<employee.length ; i++){ %>
+                <option value= <%= employee[i].id %> > <%= employee[i].name %> </option>
+              <%}%>
+            </select>
+          </div>
+          <br>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

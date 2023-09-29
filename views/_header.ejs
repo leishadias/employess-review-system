@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/header.css">
+<div>
+    <div class="navBar">
+        <div class="logo"><img src="/images/logo2.jpeg"><a href="/">Performix</a></div>
+        <% if (locals.user){ %>
+            <!--if admin-->
+            <%if(locals.user.isAdmin){%>
+                <div class="nav-menu-container">
+                    <div class="nav-item dropdown d-flex">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <%= user.name%>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="/"> Home </a></li>
+                            <li><a class="dropdown-item"  data-bs-target="#assignTaskModal" data-bs-toggle="modal" > Assign Work </a></li>
+                            <li><a class="dropdown-item"  data-bs-target="#makeAdminModal" data-bs-toggle="modal" > Admin users </a></li>
+                            <li><a class="dropdown-item" href="/admin/view-employee"> Employee Details </a></li>
+                            <li><a class="dropdown-item" href="/admin/add-employee">  Add Employee  </a></li>
+                            <li><a class="dropdown-item" href="/users/sign-out" > Logout </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <%- include('_assign_task')%>
+                <%- include('_make_admin')%>
+            <%}else{%>
+                <!--if not an admin-->
+                <div class="nav-menu-container"> 
+                    <div class="nav-item dropdown d-flex">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <%= user.name%>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <% if(!locals.user.isAdmin){ %>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminLogin">Admin login</a></li>
+                            <%}%>  
+                            <li><a class="dropdown-item" href="/users/sign-out">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <%- include('_admin_login')%>
+            <%}%>
+        <%} else { %>
+            <div class="noUser">
+                <ul>
+                    <li> <a href="/users/sign-in"> Sign-In </a> </li>
+                    <li>  <a href="/users/sign-up"> Sign-Up </a> </li>
+                </ul>
+            </div>
+        <%}%>       
+    </div>
+</div> 

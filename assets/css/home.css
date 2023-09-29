@@ -1,0 +1,104 @@
+body{
+  margin-bottom: 25px;
+}
+
+/*main content*/
+.outerDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/*introduction*/
+.intro-box{
+  width: 75%;
+  height:fit-content;
+  text-align: center;
+  margin-top:10px;
+  font-family: Arial, sans-serif;
+}
+
+.intro{
+  color: #055050;;
+  font-size:large
+}
+
+.intro strong{
+  color: #1f9394;
+}
+
+/*container of reviews and people to be reviewed*/
+.home-box{
+  width: 65%;
+  height:fit-content;
+  text-align: center;
+  margin-top:10px;
+  font-family: Arial, sans-serif;
+  color: #125354;
+}
+
+/*People to be reviewed*/
+/*heading*/
+.employeereview{
+  font-family: Arial, sans-serif;
+  font-weight:600;
+}
+
+/*container having all review forms*/
+.reviewBox{
+  width: 95%;
+  height: fit-content;
+  min-height: 140px;
+  padding: 0 20px 20px;
+  border: 1px solid  #00a6a7;
+  border-radius: 10px;
+  margin-top:5px;
+  background-color: #cfe7e7;
+} 
+
+/*review forms*/
+.review-form-conatiner{
+  border: 1px solid grey;
+  background-color: aliceblue;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.review-form-conatiner textarea{
+  outline: none;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #037171;
+}
+
+.submit-btn{
+  background-color: #01a2a1;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+}
+
+/*current user review*/
+.myreview{
+  font-family: Arial, sans-serif;
+  font-weight:600;
+}
+
+/*each review received*/
+.review-card{
+  width: 80%;
+  border: 1px solid #00a6a7;
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.review-card h5{
+  color: #064343;
+}

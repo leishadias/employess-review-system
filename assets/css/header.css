@@ -1,0 +1,102 @@
+.navBar{
+    background-color:#cfe7e7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 45px;
+    text-decoration: none;
+    color:#00a6a7;
+    letter-spacing:4px;
+    font-weight: 600;
+    text-shadow: -1px 1px 0 #b1e7e7,
+        1px 1px 0 #135518,
+        1px -1px 0 #42afac,
+        -1px -1px 0 #918d0b;
+}
+
+.logo img{
+    height:65px;
+    width:65px;
+    margin-left:10px;
+    margin-top:-30px;
+}
+
+
+/* navBar menu container */
+.nav-menu-container{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-container a{
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color:#025d5d;
+}
+
+/*if user isnt logged in*/
+.noUser ul{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.noUser li{
+    list-style: none;
+    font-size: 19px;
+    padding-left: 20px;
+    margin-top:10px;
+    margin-right:20px;
+}
+
+.noUser li a{
+    text-decoration: none;
+    color: #00a6a7;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+    .logo img{
+        height:50px;
+        width:50px;
+        margin-top:-20px;
+    }
+    .logo a{
+        font-size: 35px;
+        letter-spacing:4px;
+        font-weight: 500;
+    }
+    .noUser li{
+        padding-left: 0;
+        
+    }
+}
+
+/*modals*/
+.modal-content{
+    border: 1px solid #00a6a7;
+}
+
+.modal-header{
+    background-color: #cfe7e7;
+    color: #04797a;
+}
+
+.form-select{
+    background-image: none;
+}
+
+/* login as admin form */
+.submitHomeButton{
+    background-color: #00a6a7;
+    color: white;
+}
+
+.submitHomeButton:hover{  
+    background-color: #24b4b4 ;  
+    color: white;
+}

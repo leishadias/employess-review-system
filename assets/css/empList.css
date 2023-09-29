@@ -1,0 +1,20 @@
+.text-center{
+    font-size:1.2rem;
+    margin-top:5px;
+    font-weight:bold;
+    color: #0a6667;
+}
+
+.delete-btn{
+    background-color: #8ec9c9;
+}
+
+.disbled-delete-btn{
+    background-color: rgb(167, 200, 201);
+    pointer-events: none;
+    color: gray;
+}
+
+.delete-btn:hover{
+    background-color: #76c0c0;;
+}
