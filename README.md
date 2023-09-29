@@ -27,7 +27,7 @@ The admin has the task to allot reviewers and reviwees. The admin can also add n
 * Make 1 login for admin and employee
 * An employee can register, only admin can make an employee an admin
 
-### Tech Stack
+
 ## Languages, Frameworks and Tech stack used
 - This project was made using HTML, CSS and Javscript.
 - Additional framework like bootstrap was used as well.
