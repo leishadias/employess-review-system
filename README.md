@@ -38,6 +38,10 @@ The admin has the task to allot reviewers and reviwees. The admin can also add n
   1. Clone this project
   2. Start by installing npm if you don't have it already.
   3. Navigate to Project Directory.
+  4. Update environment variables as follows:
+      - ERS_DB="ERsystem_prod"
+      - ERS_ENVIRONMENT="production"
+      - ERS_SESSION_COOKIE_KEY="somekey"
 
 Run the following commands.
    ```` 
