@@ -93,50 +93,56 @@ Run the following commands.
 
 ### Folder Structure
 
-```
+````
 Employee Review System
-    |
-    |               |--->css
-    |--->assets---->|--->images
+    |----assets
+    |      |----css
+    |      |----images
     |             
+    |----config
+    |      |----environment.js
+    |      |----middleware.js
+    |      |----mongoose.js
+    |      |----passport-local-strategy.js
     |
-    |               |--->environment.js
-    |               |--->middleware.js
-    |--->config---->|--->mongoose.js
-    |               |--->passport-local-strategy.js
+    |----controllers
+    |      |----admin_controller.js
+    |      |----home_controller.js
+    |      |----review_controller.js
+    |      |----user_controller.js
     |
-    |                  |-->admin_controller.js
-    |--->controllers-->|-->home_controller.js
-    |                  |-->review_controller.js
-    |                  |-->user_controller.js
+    |----models
+    |      |----review.js
+    |      |----user.js
     |
-    |--->models---->|-->review.js
-    |               |-->user.js
+    |----node_modules
     |
-    |-->node_modules
+    |----production_logs
     |
-    |-->production_logs
+    |----routes
+    |      |----admin.js
+    |      |----index.js
+    |      |----reviews.js
+    |      |----users.js
     |
-    |               |-->admin.js
-    |--->routes---->|-->index.js
-    |               |-->reviews.js
-    |               |-->users.js
+    |----views
+    |      |----_admin_login.ejs
+    |      |----_assign_task.ejs
+    |      |----_header.ejs
+    |      |----_make_admin.ejs
+    |      |---- addEmployee.ejs
+    |      |---- employee.ejs
+    |      |---- forgot_password.ejs
+    |      |----home.ejs
+    |      |----layout.ejs
+    |      |----user_sign_in.ejs
+    |      |----user_sign_up.ejs
     |
-    |              |--->_admin_login.ejs
-    |              |--->_assign_task.ejs
-    |              |--->_header.ejs
-    |              |--->_make_admin.ejs
-    |              |---> addEmployee.ejs
-    |--->views---->|---> employee.ejs
-    |              |--->forgot_password.ejs
-    |              |--->home.ejs
-    |              |--->layout.ejs
-    |              |--->user_sign_in.ejs
-    |              |--->user_sign_up.ejs
+    |----.gitignore
     |
-    |-->.gitignore
-    |--> index.js
-    |--> package-lock.json
-    |-->package.json
-    
-    ````
+    |---- index.js
+    |
+    |---- package-lock.json
+    |
+    |----package.json
+````
